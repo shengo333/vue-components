@@ -1,5 +1,8 @@
 <template>
-<greet />
+<greet name="Bruce" heroName="Batmen"/>
+<greet name="John" heroName="rock"/>
+<greet name="Seb" heroName="F1champ"/>
+<greet :name="name" :heroName="channel"/>
 </template>
 
 <script>
@@ -9,7 +12,13 @@ import greet from './components/Greet.vue'
 export default {
   name: 'App',
   components: {
-    greet
+    greet,
+  },
+  data(){
+    return {
+    name: 'bulkin',
+    channel: 'bulkindrive'
+    }
   }
 }
 </script>

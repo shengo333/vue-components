@@ -1,27 +1,28 @@
 <template>
-<h2>app component user name is mister : {{name}}</h2>
-  <ComponentC />
+  <button @click="showPopup = true">Show Popup</button>
+  <Popup v-show="showPopup" @close="closePopup" />
 </template>
 
 <script>
 
 
-import ComponentC from './components/ComponentC.vue'
+
+import Popup from './components/Popup.vue'
 
 export default {
   name: 'App',
   components: {
-    ComponentC
+    Popup,
   },
   data(){
     return {
-    name: 'bulkin', 
-    channel: 'bulkindrive'
+      showPopup: false
     }
   },
-  provide(){
-    return{
-      username: this.name, 
+  methods:{
+    closePopup(name){
+      this.showPopup = false,
+      console.log('name', name)
     }
   }
 }

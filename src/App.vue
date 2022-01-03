@@ -1,26 +1,27 @@
 <template>
-<greet name="Bruce" heroName="Batmen"/>
-<greet name="John" heroName="rock"/>
-<greet name="Seb" heroName="F1champ"/>
-<greet :name="name" :heroName="channel"/>
-<Article id="my-article" title="Article Title" :likes="50" :isPublished="true"/>
+<h2>app component user name is mister : {{name}}</h2>
+  <ComponentC />
 </template>
 
 <script>
 
-import greet from './components/Greet.vue'
-import Article from './components/Article.vue'
+
+import ComponentC from './components/ComponentC.vue'
 
 export default {
   name: 'App',
   components: {
-    greet,
-    Article
+    ComponentC
   },
   data(){
     return {
-    name: 'bulkin',
+    name: 'bulkin', 
     channel: 'bulkindrive'
+    }
+  },
+  provide(){
+    return{
+      username: this.name, 
     }
   }
 }

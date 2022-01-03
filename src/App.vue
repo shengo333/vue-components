@@ -3,7 +3,7 @@
 <greet name="John" heroName="rock"/>
 <greet name="Seb" heroName="F1champ"/>
 <greet :name="name" :heroName="channel"/>
-<Article title="Article Title" :likes="50" :isPublished="true"/>
+<Article id="my-article" title="Article Title" :likes="50" :isPublished="true"/>
 </template>
 
 <script>

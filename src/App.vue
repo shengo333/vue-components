@@ -1,20 +1,26 @@
 <template>
-  <Input v-model="name" />
+  <Card />
+  <Card>Card content</Card>
+  <Card><h2>Card content</h2></Card>
+
+  <Card><img src="https://picsum.photos/200"/> </Card>
+  
 </template>
 
 <script>
 
 
-import Input from './components/Input.vue'
+import Card from './components/Card.vue'
 
 export default {
   name: 'App',
   components: {
-    Input,
+    Card,
   },
   data(){
     return{
-      name: ''
+      name: '',
+      
     }
   },
   methods:{
